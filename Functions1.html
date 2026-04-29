@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+
+    <!-- //Defining a function - Creating a function
+    //Execute a function - calling a function or invoke a function
+    //() - this is called parenthesis, we use it to execute a function
+    //{} - this is called curly braces, we use it to define a function -->
+
+    <script>
+        function sayHello() {
+            console.log("Hello World");
+        }
+
+        sayHello(); // calling the function
+
+        //  Anonymous function - a function without a name
+        var sayhelloAnonymousFunction = function () {
+            console.log("Hello World from anonymous function");
+        }
+        sayhelloAnonymousFunction(); // this will print the function definition
+
+        var sayHelloFunctionWithName = function helloWorld() {
+            console.log("Hello World from named function");
+        }
+        sayHelloFunctionWithName(); // this will print the function definition
+
+
+        //ES6 Functions - Arrow functions
+        var sayHelloFromArrowFunction = () => {
+            console.log("Hello World from arrow function this is ES6 function");
+        }
+        sayHelloFromArrowFunction(); // this will print the function definition
+
+        (function () {
+            console.log("Hello World from IIFE - Immediately Invoked Function Expression");
+        })(); // this will print the function definition
+
+        (() => {
+            console.log("Hello World from IIFE - Immediately Invoked Function Expression with arrow function");
+        })(); // this will print the function definition
+
+        (function sayHelloFromIIFE() {
+            console.log("Hello World from IIFE - Immediately Invoked Function Expression with named function");
+        })(); // this will print the function definition
+
+    </script>
+
+</body>
+
+</html>
