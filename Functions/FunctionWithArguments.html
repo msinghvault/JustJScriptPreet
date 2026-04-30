@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions with Arguments</title>
+</head>
+<body>
+    <script>
+        function calculateFunction(){
+            var a = 1;
+            var b = 2;
+            document.writeln("The sum of " + a + " and " + b + " is: " + (a + b) + "<br>");
+        }
+
+        calculateFunction();
+
+        function calculateFunctionWithArguments(a, b){
+            document.writeln("The sum of " + a + " and " + b + " is: " + (a + b) + "<br>");
+        }
+        
+        calculateFunctionWithArguments(5,5);
+
+        function calcualteTwoNumberWithRetunValue(a, b){
+            var total = a + b;
+            return total;
+        }
+
+        var result = calcualteTwoNumberWithRetunValue(10, 20);
+        document.writeln("The result is: " + result + "<br>");
+
+        var total = (function(){
+            var a = 30;
+            var b = 20;
+            return a + b;
+        })();
+        document.writeln("The total is: " + total + "<br>");
+
+    </script>
+</body>
+</html>
