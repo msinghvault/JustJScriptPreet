@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Utilizations</title>
+</head>
+
+<body>
+    <script>
+        var person1 = {
+            fname: "Manpreet",
+            lname: "Singh"
+        }
+        console.log(person1)
+        person1.email = "msinghvault@gmail.com"
+        person1["age"] = "99"
+
+        console.log(person1)
+
+        class Student {
+
+        }
+
+        var Student1 = new Student();
+        Student1.age = "99",
+            Student1.name = "Manpreet Singh",
+            console.log(Student1)
+
+        var Student2 = new Student();
+        Student2.age = "100",
+            Student2.name = "Harpreet Singh",
+            console.log(Student2);
+        Student2.School = "Cornellia";
+        console.log(Student2);
+        delete Student2.School;
+        console.log(Student2);
+
+
+        var employee = {
+            fname: "Manpreet",
+            lname: "Singh",
+            fullname: function () {
+                return fname + " " + lname;
+            },
+            address: {
+                city: "bangalore",
+                country: "india",
+                zip: "48584"
+            }
+        }
+
+        console.log(employee.address)
+        //console.log(employee.fullname().toString)
+
+    </script>
+</body>
+
+</html>
