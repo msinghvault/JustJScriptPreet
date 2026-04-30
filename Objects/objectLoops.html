@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects Loop</title>
+</head>
+
+<body>
+    <script>
+        var Student = {
+            fname: "Manpreet",
+            lname: "Singh",
+            age: "99,"
+        }
+        console.log(Student)
+
+        for (s in Student) {
+            console.log(s + ":" + Student[s])
+        }
+
+        delete Student.age;
+        for (s in Student) {
+            console.log(s + ":" + Student[s])
+        }
+
+    </script>
+</body>
+
+</html>
