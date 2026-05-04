@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects Practice</title>
+</head>
+
+<body>
+    <script>
+        var Person = {
+            fname: "Manpreet",
+            lname: "Singh",
+            age: "99"
+        }
+
+        document.write(Person.fname + " " + Person.lname + " is " + Person.age + " years old.");
+        console.log(Person);
+
+
+
+        var user = new Object();
+        user.name = "John";
+        user.age = 30;
+        user.city = "New York";
+
+        console.log(user)
+
+        function Person(fname, lname, age) {
+            this.fname = fname;
+            this.lname = lname;
+            this.age = age;
+
+            var user1 = new Person("Manpreet", "Singh", 99);
+            console.log(user1);
+        }
+
+        class Person2 {
+            constructor(fname, lname, age) {
+                this.fname = fname;
+                this.lname = lname;
+                this.age = age;
+            }
+        }
+        var user2 = new Person2("Manpreet", "Singh", 99);
+        console.log(user2["age"]);
+        user.age = 100;
+        console.log(user.age);
+
+        delete user2.age;
+        console.log(user2);
+
+
+        const user3 = {
+            Corporation: "Carribou",
+            greet: function () {
+                console.log("Welcome to " + this.Corporation);
+            }
+        }
+        user3.greet();
+        console.log(user3);
+
+
+        const user4 = {
+            Corp: "Google",
+            address: {
+                city: "Mountain View",
+                state: "California"
+            }
+        }
+        console.log(user4.address.city);
+
+        const A = {
+            city: "Plyumouth",
+            state: "Minnesota",
+            zip: "55446"
+        }
+
+        for (let key in A) {
+            console.log(key + " :" + A[key]);
+        }
+
+
+        var cartItem = {
+            name: "Laptop",
+            price: 999.99,
+            quantity: 2,
+            totalPrice: function () {
+                return this.price * this.quantity;
+            }
+        }
+
+        console.log("Total Price of the Items in the cart is: " + cartItem.totalPrice());
+    </script>
+</body>
+
+</html>
