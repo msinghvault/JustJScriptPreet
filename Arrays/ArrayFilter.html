@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Filters</title>
+</head>
+
+<body>
+
+    <script>
+
+        var houses = new Array("House1", "House2", "House3", "House4424242342324", "House5", "House6", "House7");
+        // houses.forEach(function (housesNumber){
+        //     console.log(housesNumber);
+        // })
+        // console.log(houses);
+
+        var newHouseArray = houses.find(function (house){
+            //return house === "House4";
+            return house.length > 10
+        })
+        console.log(newHouseArray);
+
+        var newHouseArray2 = houses.filter(function (house){
+            return house.length >= 10
+        })
+        console.log(newHouseArray2);
+    </script>
+
+</body>
+
+</html>

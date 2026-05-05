@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<script>
+    var Products = new Array("Laptop", "Phone", "Tablet", "Monitor", "Keyboard", "Mouse", "Printer");
+    //console.log(Products);
+
+    //Foreach loop is used to iterate over the elements of an array. 
+    // It takes a callback function as an argument and executes that function for each element in the array.
+    // Products.forEach(function (item, index, array) {
+    //     console.log("Product " + item + " is at index " + index);
+    //     console.log("The array is " + array);
+    // });
+
+
+    var newAllProductArrary = Products.map(function (item) {
+        //console.log("Product is " + item);
+        return item + " is a great product";
+    })
+    console.log(newAllProductArrary);
+
+
+    newAllProductArrary.forEach(function (item) {
+        console.log(item);
+    })
+
+</script>
+
+<body>
+
+</body>
+
+</html>

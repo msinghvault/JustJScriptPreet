@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Example</title>
+</head>
+
+<body>
+    <script>
+        // Arrays are used to store multiple values in a single variable.
+        // Arrays are a special type of object that can hold multiple values.
+        // Arrays are ordered, meaning that the values are stored in a specific order and can be
+        var carsArray = [];
+        console.log(carsArray);
+
+
+        var carsArray2 = new Array();
+        console.log(carsArray2);
+
+
+        var carsArray3 = new Array("Lexus", "BMW", "Mercedes", "Audi", "Tesla", "Toyota", "Honda");
+        console.log(carsArray3);
+
+        // carsArray3.push("Ford"); // adds "Ford" to the end of the array
+        // console.log(carsArray3);
+
+        // carsArray3.unshift("Chevrolet"); // adds "Chevrolet" to the beginning of the array
+        // console.log(carsArray3);
+
+        // carsArray3.shift(); // removes the first element from the array
+        // console.log(carsArray3)
+
+        // carsArray3.splice(3,1,"Nissan"); // removes the last element from the array
+        // console.log(carsArray3);
+
+        //Removing elements from array
+        // carsArray3.pop(); // removes the last element from the array
+        // console.log(carsArray3);
+
+        // carsArray3.shift(); // removes the first element from the array
+        // console.log(carsArray3);
+
+        // carsArray3.splice(3, 1); // removes the element at index 3 (Mercedes)
+        // console.log(carsArray3);
+
+        for (i = 0; i < carsArray3.length; i++) {
+            console.log(carsArray3[i]);
+            document.writeln(carsArray3[i] + "<br/>");
+        }
+
+    </script>
+
+</body>
+
+</html>
