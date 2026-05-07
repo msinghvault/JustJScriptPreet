@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var Fruits = new Array("Apple", "Banana", "Cherry", "Date", "Elderberry");
+        console.log(Fruits);
+
+        for (i = 0; i < Fruits.length; i++) {
+            //console.log(Fruits[i]);
+            document.writeln(Fruits[i] + "<br/>");
+        }
+
+        console.log(Fruits[0]);
+        console.log(Fruits[Fruits.length - 1])
+
+        Fruits.push("Fig"); // Adds "Fig" to the end of the array
+        console.log(Fruits);
+
+        Fruits.unshift("Grape"); // Adds "Grape" to the beginning of the array
+        console.log(Fruits);
+
+        Fruits.pop(); // removes the last element from the array
+        console.log(Fruits);
+        console.log("================================");
+        document.writeln("===============================<br/>");
+        for (let fruit of Fruits) {
+            console.log(fruit);
+
+            document.writeln(fruit + "<br/>");
+        }
+
+        var nums = new Array(1, 2, 3, 4, 5);
+        var sum = 0;
+
+        for (let n of nums) {
+            sum += n
+        }
+        console.log("The sum of the numbers is: " + sum);
+
+        console.log("================================");
+        document.writeln("===============================<br/>");
+
+        var max = nums[0];
+        for(let n of nums){
+            if(n>max){
+                max = n;
+            }
+        }
+        console.log("The maximum number is: " + max);
+    </script>
+</body>
+
+</html>
