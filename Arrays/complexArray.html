@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Array Example</title>
+</head>
+
+<body>
+    <script>
+        var complexArray = new Array(
+            {
+                subject: "English",
+                marks: 90,
+                teacher: "Ramesh",
+                pass: true,
+                grade: "A",
+                totalMarks: 100
+            },
+            {
+                subject: "Maths",
+                marks: 95,
+                teacher: "Suresh",
+                pass: true,
+                grade: "A+",
+                totalMarks: 100
+            },
+            {
+                subject: "Science",
+                marks: 85,
+                teacher: "Priya",
+                pass: true,
+                grade: "B+",
+                totalMarks: 100
+            },
+            {
+                subject: "Social",
+                marks: 90,
+                teacher: "Anitha",
+                pass: true,
+                grade: "A",
+                totalMarks: 100
+            },
+            {
+                subject: "Computers",
+                marks: 75,
+                teacher: "Kiran",
+                pass: true,
+                grade: "B",
+                totalMarks: 100
+            }
+        );
+
+        //console.log(complexArray);
+        var totalMarks = complexArray.reduce(function(total, subject){
+            return (total.marks + subject.marks);
+            if(subject.marks == "number"){
+                return total.marks + subject.marks;
+}
+        });
+        console.log("Total Marks: " + totalMarks);
+    </script>
+</body>
+
+</html>
