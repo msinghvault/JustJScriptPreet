@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick Events</title>
+
+    <style>
+        h2{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="changeColor()"> Click Here </button>
+    <h2 onmouseover="changeh2Color()" onmouseout="changeContext()">Welcome to Javascript!!</h2>
+    <script>
+        function changeColor() {
+            document.querySelector("h2").style.display = "block";
+            document.querySelector("h2").style.color = "blue";
+        }
+        function changeh2Color() {
+            document.querySelector("h2").style.color = "red";
+        }
+        function changeContext() {
+            document.querySelector("h2").innerHTML = "Welcome to Murali classes - Javascript!!"
+        }
+    </script>
+
+</body>
+
+</html>
