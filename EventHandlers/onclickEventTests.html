@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Clickevent tests</title>
+
+    <style>
+        h2 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="changeColor()"> Click Me</button>
+    <h2 onmouseover="changeh2Color()" onmouseout="changeContext()" onmouseout="changeOnMouseOutColor()">
+        Welcome to JAVAScript!!!
+    </h2>
+    <script>
+
+        function changeColor() {
+            document.querySelector("h2").style.display = "block";
+            document.querySelector("h2").style.color = "red";
+        }
+
+        function changeh2Color() {
+            document.querySelector("h2").style.color = "blue";
+        }
+
+        function changeContext() {
+            document.querySelector("h2").innerHTML = "Welcome to Murali Classes  for Javascript!!"
+        }
+
+        function changeOnMouseOutColor() {
+            document.querySelector("h2").style.color = "darkpink"
+        }
+    </script>
+
+</body>
+
+</html>
