@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Topics</title>
+    <style>
+        h2 {
+            display: none;
+            font-size: medium;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="changeColor()" ondblclick="changeColorDblClick"> Hello Click Me</button>
+    <h2 onmouseover="changeContext()" onmouseout="changeColorh2()">Welcome to
+        Javascript!!!</h2>
+
+    <script>
+        function changeColor() {
+            document.querySelector("h2").style.display = "block";
+            document.querySelector("h2").style.color = "RED"
+        }
+
+        function changeColorDblClick() {
+            document.querySelector("h2").style.display = "block";
+            document.querySelector("h2").style.color = "PURPLE"
+        }
+
+
+        function changeContext() {
+            document.querySelector("h2").innerHTML = "Hello to Javascript!!"
+        }
+
+        // function changeContextOnContext() {
+        //     document.querySelector("h2").innerHTML = "Hello to Javascript Code!!"
+        // }
+
+        function changeColorh2() {
+            document.querySelector("h2").style.color = "blue";
+
+        }
+
+        // function changeColor() {
+        //     document.querySelector("h2").style.color = "red"
+        // }
+    </script>
+
+
+
+</body>
+
+</html>

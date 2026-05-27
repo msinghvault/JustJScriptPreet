@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <style>
+        table {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <form action="">
+        <label for="userID"> ID </label>
+        <label for="userid">ID</label>
+        <input type="text" name="" id="userid"> <br>
+        <label for="name">Name</label>
+        <input type="text" name="" id="name"> <br>
+    </form> -->
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Profession</th>
+                <th>Salary</th>
+                <th>Is Active</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+
+        var users = [
+            {
+                "id": 1,
+                "name": "Alice Johnson",
+                "age": 28,
+                "city": "New York",
+                "profession": "Software Engineer",
+                "salary": 95000,
+                "isActive": true
+            },
+            {
+                "id": 2,
+                "name": "Michael Smith",
+                "age": 35,
+                "city": "Chicago",
+                "profession": "Data Analyst",
+                "salary": 72000,
+                "isActive": true
+            },
+            {
+                "id": 3,
+                "name": "Sophia Brown",
+                "age": 42,
+                "city": "Los Angeles",
+                "profession": "Project Manager",
+                "salary": 105000,
+                "isActive": false
+            },
+            {
+                "id": 4,
+                "name": "Daniel Lee",
+                "age": 31,
+                "city": "Seattle",
+                "profession": "UX Designer",
+                "salary": 81000,
+                "isActive": true
+            },
+            {
+                "id": 5,
+                "name": "Emma Davis",
+                "age": 26,
+                "city": "Austin",
+                "profession": "Marketing Specialist",
+                "salary": 68000,
+                "isActive": false
+            }
+        ]
+        for (i = 0; i < users.length; i++) {
+            var myTr = document.createElement("tr");
+            myTr.innerHTML = `
+            <td>${users[i].id}</td>
+            <td>${users[i].name}</td>
+            <td>${users[i].age}</td>
+            <td>${users[i].city}</td>
+            <td>${users[i].profession}</td>
+            <td>${users[i].salary}</td>
+            <td>${users[i].isActive}</td>
+            `
+            document.querySelector("tbody").appendChild(myTr);
+        }
+    </script>
+</body>
+
+</html>
