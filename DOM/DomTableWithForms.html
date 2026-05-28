@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event with Forms</title>
+    <style>
+        table {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <label for="userid">ID</label>
+        <input type="text" name="" id="userid"> <br>
+
+        <label for="name">Name</label>
+        <input type="text" name="" id="name"> <br>
+
+        <label for="age">Age</label>
+        <input type="text" name="" id="age"> <br>
+
+        <label for="city">City</label>
+        <input type="text" name="" id="city"> <br>
+
+        <label for="profession">Profession</label>
+        <input type="text" name="" id="profession"> <br>
+
+        <label for="salary">Salary</label>
+        <input type="text" name="" id="salary"> <br>
+
+        <label for="active">Is Active</label>
+        <input type="text" name="" id="active"> <br>
+
+        <button type="button" onclick="readDataFromForm()"> Add Data</button>
+    </form>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Profession</th>
+                <th>Salary</th>
+                <th>Is Active</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var users = [];
+        function readDataFromForm() {
+            var user = {};
+            var myId = document.getElementById("userid").value;
+            var myName = document.getElementById("name").value
+            var myAge = document.getElementById("age").value
+            var myCity = document.getElementById("city").value
+            var myProfession = document.getElementById("profession").value
+            var mySalary = document.getElementById("salary").value
+            var isMyUserActive = document.getElementById("active").value
+
+            user.id = myId;
+            user.name = myName;
+            user.age = myAge;
+            user.city = myCity;
+            user.profession = myProfession;
+            user.salary = mySalary;
+            user.isUserActive = isMyUserActive;
+
+
+            user.myName;
+            users.push(user);
+            displayUsers();
+        }
+
+        function displayUsers() {
+            for (i = 0; i < users.length; i++) {
+                var myTr = document.createElement("tr");
+                myTr.innerHTML = `
+            <td>${users[i].id}</td>
+            <td>${users[i].name}</td>
+            <td>${users[i].age}</td>
+            <td>${users[i].city}</td>
+            <td>${users[i].profession}</td>
+            <td>${users[i].salary}</td>
+            <td>${users[i].isActive}</td>
+            `
+                document.querySelector("tbody").appendChild(myTr)
+            }
+        }
+    </script>
+</body>
+
+</html>
