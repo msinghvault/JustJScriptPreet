@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Operations</title>
+
+    <style>
+        #myUserTable {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <form>
+        <table>
+            <tr>
+                <td> <label for="id">ID</label></td>
+                <td><input type="text" name="" id="id"></td>
+            </tr>
+            <tr>
+                <td> <label for="id">Name</label></td>
+                <td><input type="text" name="" id="name"></td>
+            </tr>
+            <tr>
+                <td> <label for="age">Age</label></td>
+                <td><input type="text" name="" id="age"></td>
+            </tr>
+            <tr>
+                <td> <label for="city">City</label></td>
+                <td><input type="text" name="" id="city"></td>
+            </tr>
+            <tr>
+                <td> <label for="profession">Profession</label></td>
+                <td><input type="text" name="" id="profession"></td>
+            </tr>
+            <tr>
+                <td> <label for="salary">Salary</label></td>
+                <td><input type="text" name="" id="salary"></td>
+            </tr>
+            <tr>
+                <td> <label for="isActive">isActive</label></td>
+                <td><input type="text" name="" id="isActive"></td>
+            </tr>
+            <tr>
+                <td rowspan="2">
+                    <button type="button" onclick="addFormUser()"> Add User</button>
+                    <button type="button" onclick="clearFormData()"> Clear Form Data</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+    <table border="1" id="myUserTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Profession</th>
+                <th>Salary</th>
+                <th>Is Active</th>
+            </tr>
+        </thead>
+        <tbody id="myUsers"></tbody>
+    </table>
+
+
+    <script>
+        var users = [
+            {
+                "id": 1,
+                "name": "Alice Johnson",
+                "age": 28,
+                "city": "New York",
+                "profession": "Software Engineer",
+                "salary": 95000,
+                "isActive": true
+            },
+            {
+                "id": 2,
+                "name": "Michael Smith",
+                "age": 35,
+                "city": "Chicago",
+                "profession": "Data Analyst",
+                "salary": 72000,
+                "isActive": true
+            },
+            {
+                "id": 3,
+                "name": "Sophia Brown",
+                "age": 42,
+                "city": "Los Angeles",
+                "profession": "Project Manager",
+                "salary": 105000,
+                "isActive": false
+            },
+            {
+                "id": 4,
+                "name": "Daniel Lee",
+                "age": 31,
+                "city": "Seattle",
+                "profession": "UX Designer",
+                "salary": 81000,
+                "isActive": true
+            },
+            {
+                "id": 5,
+                "name": "Emma Davis",
+                "age": 26,
+                "city": "Austin",
+                "profession": "Marketing Specialist",
+                "salary": 68000,
+                "isActive": false
+            }
+        ]
+
+        function displayUsers() {
+            document.querySelector("#myUsers").innerHTML = ""
+
+            for (index = 0; index < users.length; index++) {
+                var myData = document.createElement("tr");
+
+                myData.innerHTML = `
+                <td> ${users[index].id} </td>
+                <td> ${users[index].name} </td>
+                <td> ${users[index].age} </td>
+                <td> ${users[index].city} </td>
+                <td> ${users[index].profession} </td>
+                <td> ${users[index].salary} </td>
+                <td> ${users[index].isActive} </td>`
+                document.querySelector("#myUsers").appendChild(myData);
+            }
+        }
+        displayUsers();
+
+        function addFormUser() {
+            var user = {};
+            user.id = document.getElementById("id").value;
+            user.name = document.getElementById("name").value;
+            user.age = document.getElementById("age").value;
+            user.city = document.getElementById("city").value;
+            user.profession = document.getElementById("profession").value;
+            user.salary = document.getElementById("salary").value;
+            user.isActive = document.getElementById("isActive").value;
+            users.push(user);
+            displayUsers();
+        }
+
+        function clearFormData(){
+            document.getElementById("id").value = "";
+            document.getElementById("name").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("city").value = "";
+            document.getElementById("profession").value = "";
+            document.getElementById("salary").value = "";
+            document.getElementById("isActive").value = "";
+        }
+    </script>
+
+</body>
+
+</html>
