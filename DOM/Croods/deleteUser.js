@@ -1,0 +1,7 @@
+function deleteUser() {
+
+}
+
+function deleteTable() {
+
+}
