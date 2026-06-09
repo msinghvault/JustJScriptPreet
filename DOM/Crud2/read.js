@@ -1,4 +1,6 @@
 
+allUsers = JSON.parse(localStorage.getItem("storedUsers"));
+
 function displayUsers() {
     document.querySelector("tbody").innerHTML = "";
     allUsers.forEach(function(usr,index){
@@ -14,3 +16,4 @@ function displayUsers() {
     })
 }
 displayUsers();
+

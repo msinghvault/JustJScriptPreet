@@ -8,7 +8,7 @@ function createUser() {
     }
 
     allUsers.push(user)
-    localStorage.setItem("storedUsers", JSON.stringify(allUsers)); 
+    localStorage.setItem("storedUsers", JSON.stringify(allUsers));
     displayUsers();
     clearUser();
 }
@@ -17,4 +17,20 @@ function clearUser() {
     document.getElementById("fname").value = "";
     document.getElementById("lname").value = "";
     document.getElementById("email").value = ""
+}
+
+function valdateInput() {
+    var fname = document.getElementById("fname").value;
+    var lname = document.getElementById("lname").value;
+    var email = document.getElementById("email").value;
+    var pattern = /[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/
+    console.log("valdateInput triggered !!", fname);
+    if (fname.length >= 6 && pattern.test(email) && lname.length >=2) {
+        document.querySelector("#addButton").removeAttribute("disabled", true);
+        document.querySelector("span").style.display = "none"
+    } else {
+        document.querySelector("#addButton").setAttribute("disabled", true)
+        document.querySelector("span").style.display = "inline-block"
+
+    }
 }
