@@ -1,6 +1,8 @@
 
 allUsers = JSON.parse(localStorage.getItem("storedUsers"));
-
+if(allUsers == null){
+    allUsers = [];
+}
 function displayUsers() {
     document.querySelector("tbody").innerHTML = "";
     allUsers.forEach(function(usr,index){
